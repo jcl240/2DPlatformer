@@ -20,6 +20,7 @@ public class SimplePlatformController : MonoBehaviour
 	// Use this for initialization
 	void Awake ()
 	{
+		Physics2D.IgnoreLayerCollision (14,15,true);
 		anim = GetComponent<Animator> ();
 		rb2d = GetComponent<Rigidbody2D> ();
 	}

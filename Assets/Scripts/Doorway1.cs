@@ -8,6 +8,9 @@ public class Doorway1 : MonoBehaviour {
 	public SimplePlatformController playerController;
 	public GameObject gameCamera;
 	Vector3 cameraRotation;
+	public float sign = 1;
+	public Vector3 playerPosition;
+	public Vector3 cameraPosition;
 
 	// Use this for initialization
 	void Start () {
@@ -22,17 +25,17 @@ public class Doorway1 : MonoBehaviour {
 	}
 
 	public void UseDoor() {
+		Vector3 playerPosition = player.transform.position;
+		Vector3 cameraPosition = gameCamera.transform.position;
 		if (player.layer == 14) {
 			player.layer = 15;
 		}
 		else
 			player.layer = 14;
-		player.transform.Translate (Vector3.forward*2);
-		player.transform.Rotate (0, 180, 0);
-		gameCamera.transform.Translate (Vector3.forward*15);
+		gameCamera.transform.position = new Vector3(cameraPosition.x, cameraPosition.y, cameraPosition.z * -1);
 		gameCamera.transform.Rotate (0, 180, 0);
-
-
+		player.transform.position =  new Vector3(playerPosition.x, playerPosition.y, playerPosition.z * -1);
+		player.transform.Rotate (0, 180, 0);
 	}
 
 }

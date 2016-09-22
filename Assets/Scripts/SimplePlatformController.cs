@@ -23,6 +23,7 @@ public class SimplePlatformController : MonoBehaviour
 	{
 		currentPage = "frontPage";
 		Physics2D.IgnoreLayerCollision (14,15,true);
+		Physics2D.IgnoreLayerCollision (9,15,true);
 		anim = GetComponent<Animator> ();
 		rb2d = GetComponent<Rigidbody2D> ();
 	}
@@ -41,7 +42,7 @@ public class SimplePlatformController : MonoBehaviour
 	{
 		float h = Input.GetAxis ("Horizontal");
 
-		if (gameObject.layer == 15)
+		if (currentPage == "backPage")
 			h *= -1;
 
 		if(h < 0.001f && h > -0.001f){
@@ -81,9 +82,18 @@ public class SimplePlatformController : MonoBehaviour
 	}
 
 	public void changePage(){
-		if (currentPage == "frontPage")
+		if (currentPage == "frontPage") {
 			currentPage = "backPage";
-		else
+			Physics2D.IgnoreLayerCollision (9, 14, true);
+			Physics2D.IgnoreLayerCollision (9, 15, false);
+		} else {
 			currentPage = "frontPage";
+			Physics2D.IgnoreLayerCollision (9,15,true);
+			Physics2D.IgnoreLayerCollision (9, 14, false);
+		}
+	}
+
+	public string getPage(){
+		return currentPage;
 	}
 }

@@ -28,13 +28,11 @@ public class Doorway1 : MonoBehaviour {
 	public void UseDoor() {
 		Vector3 playerPosition = player.transform.position;
 		Vector3 cameraPosition = gameCamera.transform.position;
-		if (player.layer == 14) {
-			player.layer = 15;
+		if (player.GetComponent<SimplePlatformController>().getPage() == "frontPage") {
 			gameCamera.GetComponent<Camera> ().cullingMask = frontMask;
 			player.GetComponent<SimplePlatformController> ().changePage ();
 		}
 		else{
-			player.layer = 14;
 			gameCamera.GetComponent<Camera> ().cullingMask = backMask;
 			player.GetComponent<SimplePlatformController> ().changePage ();
 		}

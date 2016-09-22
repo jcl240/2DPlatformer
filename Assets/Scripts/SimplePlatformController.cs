@@ -10,6 +10,7 @@ public class SimplePlatformController : MonoBehaviour
 	public float maxSpeed = 5f;
 	public float jumpForce = 1000f;
 	public Transform groundCheck;
+	private string currentPage;
 
 
 	private bool grounded = false;
@@ -20,6 +21,7 @@ public class SimplePlatformController : MonoBehaviour
 	// Use this for initialization
 	void Awake ()
 	{
+		currentPage = "frontPage";
 		Physics2D.IgnoreLayerCollision (14,15,true);
 		anim = GetComponent<Animator> ();
 		rb2d = GetComponent<Rigidbody2D> ();
@@ -28,7 +30,7 @@ public class SimplePlatformController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		grounded = Physics2D.Linecast (transform.position, groundCheck.position, 1 << LayerMask.NameToLayer ("Ground"));
+		grounded = Physics2D.Linecast (transform.position, groundCheck.position, 1 << LayerMask.NameToLayer (currentPage));
 
 		if (Input.GetButtonDown ("Jump") && grounded) {
 			jump = true;
@@ -38,6 +40,9 @@ public class SimplePlatformController : MonoBehaviour
 	void FixedUpdate ()
 	{
 		float h = Input.GetAxis ("Horizontal");
+
+		if (gameObject.layer == 15)
+			h *= -1;
 
 		if(h < 0.001f && h > -0.001f){
 			rb2d.velocity = new Vector2(0,rb2d.velocity.y);
@@ -73,5 +78,12 @@ public class SimplePlatformController : MonoBehaviour
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+	}
+
+	public void changePage(){
+		if (currentPage == "frontPage")
+			currentPage = "backPage";
+		else
+			currentPage = "frontPage";
 	}
 }

@@ -7,7 +7,7 @@ public class holePuncher : MonoBehaviour {
 	public Camera camera;
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButtonDown (0))
+		if (Input.GetMouseButtonDown (0) && GameManager.hasPunches())
 			punchHole ();
 	}
 
@@ -15,5 +15,6 @@ public class holePuncher : MonoBehaviour {
 		Vector3 worldCoordinates = camera.ScreenToWorldPoint (Input.mousePosition);
 		worldCoordinates.z = 0;
 		Instantiate (hole, worldCoordinates, Quaternion.identity);
+		GameManager.removePunch ();
 	}
 }

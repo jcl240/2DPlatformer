@@ -10,27 +10,29 @@ public class GameManager : MonoBehaviour {
 
 	private static GameManager _instance;
 
-	public int pointsToWin;
-	public Text pointsText;
+
+	public Text punchesText;
 	public GameObject winGameGraphics;
 	public GameObject loseGameGraphics;
 
 	public static GameState State = GameState.Playing;
 
-	private int points = 0;
+	private int punches = 4;
 
 	void Start(){
 		_instance = this;
+		_instance.punchesText.text = "4";
 		winGameGraphics.SetActive(false);
 		loseGameGraphics.SetActive(false);
 	}
 
-	public static void AddPoints(int points){
-		_instance.points += points;
-		_instance.pointsText.text = _instance.points.ToString();
-		if(points >= _instance.pointsToWin){
-			WinTheGame();
-		}
+	public static void removePunch(){
+		_instance.punches -= 1;
+		_instance.punchesText.text = _instance.punches.ToString();
+	}
+
+	public static bool hasPunches(){
+		return _instance.punches != 0;
 	}
 
 	public static void WinTheGame(){

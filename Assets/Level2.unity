@@ -237,7 +237,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 386272694}
   - 212: {fileID: 386272693}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: lined-paper-template-9898
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -537,9 +537,20 @@ Prefab:
       propertyPath: cam
       value: 
       objectReference: {fileID: 92628824}
+    - target: {fileID: 114000012449831458, guid: 9f6905d3fc41bef43b498935fb479946,
+        type: 2}
+      propertyPath: punches
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f6905d3fc41bef43b498935fb479946, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &864727111 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000010567334592, guid: 9f6905d3fc41bef43b498935fb479946,
+    type: 2}
+  m_PrefabInternal: {fileID: 864727110}
+  m_Script: {fileID: 11500000, guid: d30eee0e8ce6c4b4d9dd5b7099204d8e, type: 3}
 --- !u!1001 &887413926
 Prefab:
   m_ObjectHideFlags: 0
@@ -836,10 +847,6 @@ Prefab:
     - target: {fileID: 4000014261897990, guid: b2ad495f8745247078a4faf30b696281, type: 2}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000013273636762, guid: b2ad495f8745247078a4faf30b696281, type: 2}
-      propertyPath: m_Layer
-      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2ad495f8745247078a4faf30b696281, type: 2}
@@ -1207,40 +1214,15 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 223000010249548986, guid: 6f0b5886fc237c14ca9eb52ecbdfb7f7,
+    - target: {fileID: 114000010001664894, guid: 6f0b5886fc237c14ca9eb52ecbdfb7f7,
         type: 2}
-      propertyPath: m_Camera
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 92628824}
-    - target: {fileID: 224000013596382848, guid: 6f0b5886fc237c14ca9eb52ecbdfb7f7,
+      objectReference: {fileID: 864727111}
+    - target: {fileID: 114000010001664894, guid: 6f0b5886fc237c14ca9eb52ecbdfb7f7,
         type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 297
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000013596382848, guid: 6f0b5886fc237c14ca9eb52ecbdfb7f7,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 129
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000014071944256, guid: 6f0b5886fc237c14ca9eb52ecbdfb7f7,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -307
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000014071944256, guid: 6f0b5886fc237c14ca9eb52ecbdfb7f7,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 139
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000013424442450, guid: 6f0b5886fc237c14ca9eb52ecbdfb7f7,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 129
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000013424442450, guid: 6f0b5886fc237c14ca9eb52ecbdfb7f7,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 397
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadStage
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f0b5886fc237c14ca9eb52ecbdfb7f7, type: 2}

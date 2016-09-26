@@ -20,7 +20,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000014261897990}
   - 212: {fileID: 212000011162061678}
-  m_Layer: 14
+  - 114: {fileID: 114000013659550742}
+  - 61: {fileID: 61000012361124824}
+  m_Layer: 15
   m_Name: Kirby_Door_sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,12 +36,40 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013273636762}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.48, y: 13.72, z: -1}
+  m_LocalPosition: {x: 2.15, y: 13.88, z: 1}
   m_LocalScale: {x: 7, y: 7, z: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!61 &61000012361124824
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013273636762}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5}
+--- !u!114 &114000013659550742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013273636762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f7837420f61ddf4d99fb1b2c6244dca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  playerController: {fileID: 0}
+  playerPosition: {x: 0, y: 0, z: 0}
 --- !u!212 &212000011162061678
 SpriteRenderer:
   m_ObjectHideFlags: 1

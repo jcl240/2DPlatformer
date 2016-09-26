@@ -13,5 +13,11 @@ EditorBuildSettings:
     path: Assets/MainScene.unity
   - enabled: 0
     path: Assets/Side_B.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/developmentScene.unity
+  - enabled: 1
+    path: Assets/Level1.unity
+  - enabled: 1
+    path: Assets/Level2.unity
+  - enabled: 1
+    path: Assets/Level3.unity

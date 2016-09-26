@@ -28,6 +28,7 @@ public class SimplePlatformController : MonoBehaviour
 		currentPage = "frontPage";
 		Physics2D.IgnoreLayerCollision (14,15,true);
 		Physics2D.IgnoreLayerCollision (9,15,true);
+		Physics2D.IgnoreLayerCollision (9,14,false);
 		anim = GetComponent<Animator> ();
 		rb2d = GetComponent<Rigidbody2D> ();
 		alive = true;

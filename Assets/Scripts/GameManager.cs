@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	private static GameManager _instance;
+	public static float deathHeight;
 
 
 	public Text punchesText;
@@ -18,6 +19,10 @@ public class GameManager : MonoBehaviour {
 	public static GameState State = GameState.Playing;
 
 	private int punches = 4;
+
+	void Awake(){
+		deathHeight = gameObject.transform.localPosition.y;
+	}
 
 	void Start(){
 		_instance = this;

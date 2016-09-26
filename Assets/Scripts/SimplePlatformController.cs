@@ -11,6 +11,7 @@ public class SimplePlatformController : MonoBehaviour
 	public float jumpForce = 1000f;
 	public Transform groundCheck;
 	private string currentPage;
+	private bool alive;
 
 
 	private bool grounded = false;
@@ -26,11 +27,14 @@ public class SimplePlatformController : MonoBehaviour
 		Physics2D.IgnoreLayerCollision (9,15,true);
 		anim = GetComponent<Animator> ();
 		rb2d = GetComponent<Rigidbody2D> ();
+		alive = true;
 	}
 
 	// Update is called once per frame
 	void Update ()
 	{
+		if (gameObject.transform.localPosition.y < GameManager.deathHeight && alive == true)
+			die ();
 		grounded = Physics2D.Linecast (transform.position, groundCheck.position, 1 << LayerMask.NameToLayer (currentPage));
 
 		if (Input.GetButtonDown ("Jump") && grounded) {
@@ -95,5 +99,11 @@ public class SimplePlatformController : MonoBehaviour
 
 	public string getPage(){
 		return currentPage;
+	}
+
+	void die(){
+		hearts.removeLife ();
+		Debug.Log ("died");
+		alive = false;
 	}
 }

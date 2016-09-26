@@ -4,7 +4,7 @@ using System.Collections;
 public class holePuncher : MonoBehaviour {
 
 	public GameObject hole;
-	public Camera camera;
+	public Camera cam;
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetMouseButtonDown (0) && GameManager.hasPunches())
@@ -12,7 +12,7 @@ public class holePuncher : MonoBehaviour {
 	}
 
 	void punchHole(){
-		Vector3 worldCoordinates = camera.ScreenToWorldPoint (Input.mousePosition);
+		Vector3 worldCoordinates = cam.ScreenToWorldPoint (Input.mousePosition);
 		worldCoordinates.z = 0;
 		Instantiate (hole, worldCoordinates, Quaternion.identity);
 		GameManager.removePunch ();

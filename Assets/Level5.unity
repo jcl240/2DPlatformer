@@ -474,7 +474,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013292601440, guid: d47dd96e0d2e44ccfa95d1ff750a9bcc, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4000013292601440, guid: d47dd96e0d2e44ccfa95d1ff750a9bcc, type: 2}
       propertyPath: m_LocalRotation.x
@@ -499,6 +499,10 @@ Prefab:
     - target: {fileID: 1000011834825350, guid: d47dd96e0d2e44ccfa95d1ff750a9bcc, type: 2}
       propertyPath: m_Name
       value: coin (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011834825350, guid: d47dd96e0d2e44ccfa95d1ff750a9bcc, type: 2}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d47dd96e0d2e44ccfa95d1ff750a9bcc, type: 2}

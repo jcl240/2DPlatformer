@@ -670,6 +670,11 @@ Prefab:
       propertyPath: jumpForce
       value: 1050
       objectReference: {fileID: 0}
+    - target: {fileID: 114000014192544186, guid: 6aa187bc6339843479c03fdfd71404a3,
+        type: 2}
+      propertyPath: backMask.m_Bits
+      value: 4294934527
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6aa187bc6339843479c03fdfd71404a3, type: 2}
   m_IsPrefabParent: 0

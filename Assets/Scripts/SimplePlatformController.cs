@@ -12,6 +12,7 @@ public class SimplePlatformController : MonoBehaviour
 	public Transform groundCheck;
 	private string currentPage;
 	private bool alive;
+	public LayerMask backMask;
 
 
 	private bool grounded = false;
@@ -22,6 +23,7 @@ public class SimplePlatformController : MonoBehaviour
 	// Use this for initialization
 	void Awake ()
 	{
+		gameObject.GetComponentInChildren<Camera> ().cullingMask = backMask;
 		currentPage = "frontPage";
 		Physics2D.IgnoreLayerCollision (14,15,true);
 		Physics2D.IgnoreLayerCollision (9,15,true);

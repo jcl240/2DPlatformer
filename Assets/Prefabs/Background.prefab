@@ -21,7 +21,7 @@ GameObject:
   - 4: {fileID: 4000010083242878}
   - 212: {fileID: 212000011967680228}
   m_Layer: 0
-  m_Name: lined-paper-template-9898
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

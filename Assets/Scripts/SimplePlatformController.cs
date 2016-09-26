@@ -103,7 +103,7 @@ public class SimplePlatformController : MonoBehaviour
 
 	void die(){
 		hearts.removeLife ();
-		Debug.Log ("died");
+		gameObject.GetComponentInChildren<Camera> ().transform.SetParent (null);
 		alive = false;
 	}
 }

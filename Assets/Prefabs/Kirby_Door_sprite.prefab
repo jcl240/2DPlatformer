@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000014261897990}
   - 212: {fileID: 212000011162061678}
-  m_Layer: 15
+  m_Layer: 14
   m_Name: Kirby_Door_sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -41,7 +41,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30eee0e8ce6c4b4d9dd5b7099204d8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutTexture: {fileID: 2800000, guid: 1d0c184845252df44a655359de388cb8, type: 3}
+  fadeOutTexture: {fileID: 2800000, guid: ab360499fc831064c85c84d941b2a47a, type: 3}
   fadeSpeed: 0.8
 --- !u!114 &114000012449831458
 MonoBehaviour:
@@ -55,8 +55,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   punchesText: {fileID: 0}
-  winGameGraphics: {fileID: 0}
-  loseGameGraphics: {fileID: 0}
 --- !u!114 &114000013191587620
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -69,7 +67,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hole: {fileID: 1000013060853986, guid: fa1efebecbe2c42a8a13ff400e73c376, type: 2}
-  cam: {fileID: 0}
+  cam: {fileID: 20000013824433732, guid: 6aa187bc6339843479c03fdfd71404a3, type: 2}
 --- !u!222 &222000010885098272
 CanvasRenderer:
   m_ObjectHideFlags: 1

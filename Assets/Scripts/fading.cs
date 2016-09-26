@@ -37,7 +37,7 @@ public class fading : MonoBehaviour {
 		BeginFade(-1);		// call the fade in function
 	}
 
-	public void LoadStage(string songName)  {
+	public void LoadStage()  {
 		SceneManager.sceneLoaded += (scene, loadingMode) => levelLoaded ();
 		BeginFade (1);
 		StartCoroutine (LoadScene(1));
@@ -57,5 +57,6 @@ public class fading : MonoBehaviour {
 	public IEnumerator LoadScene(int scene){
 		yield return new WaitForSeconds (fadeSpeed);
 		SceneManager.LoadScene (scene);
+		hearts.lives = 4;
 	}
 }

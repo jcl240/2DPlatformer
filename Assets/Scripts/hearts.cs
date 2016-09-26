@@ -4,7 +4,7 @@ using System.Collections;
 public class hearts : MonoBehaviour {
 
 	public Texture tex;
-	static float lives = 3;
+	public static float lives = 4;
 
 	private float texWidth;
 	private float texHeight;

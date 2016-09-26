@@ -12,9 +12,11 @@ public class holePuncher : MonoBehaviour {
 	}
 
 	void punchHole(){
-		Vector3 worldCoordinates = cam.ScreenToWorldPoint (Input.mousePosition);
-		worldCoordinates.z = 0;
-		Instantiate (hole, worldCoordinates, Quaternion.identity);
-		GameManager.removePunch ();
+		if (GameManager.State == GameManager.GameState.Playing) {
+			Vector3 worldCoordinates = cam.ScreenToWorldPoint (Input.mousePosition);
+			worldCoordinates.z = 0;
+			Instantiate (hole, worldCoordinates, Quaternion.identity);
+			GameObject.Find ("GameManager").GetComponent<GameManager> ().removePunch ();
+		}
 	}
 }

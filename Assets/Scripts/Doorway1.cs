@@ -15,8 +15,8 @@ public class Doorway1 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		player = GameObject.Find ("hero");
-		gameCamera = GameObject.Find ("Main Camera");
+		player = GameObject.Find ("/hero");
+		gameCamera = GameObject.Find ("/hero/Main Camera");
 		playerController = player.GetComponent<SimplePlatformController> (); //get the player controller
 	}
 	

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class SimplePlatformController : MonoBehaviour
 {
@@ -104,8 +105,19 @@ public class SimplePlatformController : MonoBehaviour
 	}
 
 	void die(){
+		Camera cam = gameObject.GetComponentInChildren<Camera> ();
+		cam.transform.SetParent (null);
 		hearts.removeLife ();
-		gameObject.GetComponentInChildren<Camera> ().transform.SetParent (null);
 		alive = false;
+		if (hearts.lives == 0) 
+			GameObject.Find("GameManager").GetComponent<GameManager>().LoseTheGame ();
+		else
+			StartCoroutine(reload ());
 	}
+
+	IEnumerator reload(){
+		yield return new WaitForSeconds (2);
+		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
+	}
+
 }

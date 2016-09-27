@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f7837420f61ddf4d99fb1b2c6244dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 100020, guid: 6aa187bc6339843479c03fdfd71404a3, type: 2}
   playerController: {fileID: 0}
   playerPosition: {x: 0, y: 0, z: 0}
 --- !u!212 &212000011162061678

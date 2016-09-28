@@ -12,7 +12,8 @@ public class finalStats : MonoBehaviour {
 	void Start () {
 		coinsCollected.text += GameManager.getPoints ().ToString();
 		livesLeft.text += hearts.lives.ToString ();
-		timePlayed.text += GameManager.timeStarted - Time.time;
+		timePlayed.text += GameManager.timeStarted + Time.time;
+
 	}
 	
 	// Update is called once per frame

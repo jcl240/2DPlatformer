@@ -6,6 +6,7 @@ public class Coin : MonoBehaviour {
 	public float rotationSpeed;
 
 	void OnTriggerEnter2D(Collider2D other){
+		GameManager.AddPoints();
 		Destroy(gameObject);
 	}
 

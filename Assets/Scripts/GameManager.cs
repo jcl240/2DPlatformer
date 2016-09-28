@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour {
 	public static GameState State = GameState.Playing;
 
 	public int punches;
+	private static int points;
 
 	void Awake(){
 		State = GameState.Playing;
@@ -34,6 +35,16 @@ public class GameManager : MonoBehaviour {
 	}
 
 	void Start(){
+		_instance.setPoints ();
+	}
+
+	public void setPoints(){
+		GameObject.Find ("/Canvas/coinsText").GetComponent<Text>().text = points.ToString();
+	}
+
+	public static void AddPoints(){
+		points += 1;
+		_instance.setPoints ();
 	}
 
 	public void removePunch(){

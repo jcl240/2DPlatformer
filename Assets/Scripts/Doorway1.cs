@@ -38,8 +38,6 @@ public class Doorway1 : MonoBehaviour {
 			gameCamera.GetComponent<Camera> ().cullingMask = backMask;
 			player.GetComponent<SimplePlatformController> ().changePage ();
 		}
-		foreach (Transform child in player.transform)
-			child.gameObject.layer = player.layer;
 		gameCamera.transform.position = new Vector3(cameraPosition.x, cameraPosition.y, cameraPosition.z * -1);
 		gameCamera.transform.Rotate (0, 180, 0);
 		player.transform.position =  new Vector3(playerPosition.x, playerPosition.y, playerPosition.z * -1);

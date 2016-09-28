@@ -60,6 +60,6 @@ public class fading : MonoBehaviour {
 	}
 
 	public void initializeLives(){
-		hearts.lives = 4;
+		hearts.lives = 5;
 	}
 }

@@ -206,7 +206,7 @@ Prefab:
     - target: {fileID: 114000012449831458, guid: 9f6905d3fc41bef43b498935fb479946,
         type: 2}
       propertyPath: punches
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f6905d3fc41bef43b498935fb479946, type: 2}

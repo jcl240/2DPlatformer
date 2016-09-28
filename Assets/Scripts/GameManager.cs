@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour {
 
 	public static GameState State = GameState.Playing;
 
+	public static float timeStarted;
 	public int punches;
 	private static int points;
 
@@ -60,4 +61,13 @@ public class GameManager : MonoBehaviour {
 		State = GameState.Ended;
 		_instance.loseGameGraphics.SetActive(true);
 	}
+
+	public static int getPoints(){
+		return points;
+	}
+
+	public void startTimer(){
+		timeStarted = Time.time;
+	}
+		
 }

@@ -16,7 +16,7 @@ public class hearts : MonoBehaviour {
 
 	void OnGUI() {
 		if (lives > 0) {
-			Rect posRect = new Rect(80,50,texWidth / 5 * lives, texHeight);
+			Rect posRect = new Rect(120,40,texWidth / 5 * lives, texHeight);
 			Rect texRect = new Rect(0,0,1.0f / 5 * lives, 1.0f);
 			GUI.DrawTextureWithTexCoords(posRect, tex, texRect);
 		}

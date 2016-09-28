@@ -1080,6 +1080,11 @@ Prefab:
       propertyPath: punches
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013191587620, guid: 9f6905d3fc41bef43b498935fb479946,
+        type: 2}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1716987833}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f6905d3fc41bef43b498935fb479946, type: 2}
   m_IsPrefabParent: 0
